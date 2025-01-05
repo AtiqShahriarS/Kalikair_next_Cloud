@@ -38,13 +38,13 @@ export default function News(){
         <div>
         <main className="max-w-5xl mx-auto px-4 py-6">
             <section className="mb-12">
-                <h2 className="text-3xl font-bold text-[#007554] mb-4">
+                <h2 className="text-xl md:text-3xl font-bold text-[#007554] mb-4">
                     News
                 </h2>
                 <div className="flex flex-col space-y-4">
                     {news.map((news, index) => (
                         <div key={index} className="hover:bg-zinc-200 bg-zinc-100 p-4 rounded-lg flex flex-col space-y-2">
-                            <a href={news.link} target="_blank" className="text-lg font-semibold text-black">
+                            <a href={news.link} target="_blank" className="text-base md:text-lg font-semibold text-black">
                                 {news.title}
                             </a>
                         </div>
@@ -53,16 +53,16 @@ export default function News(){
                 </div>
             </section>
             <section className="mb-8">
-                <h2 className="text-3xl font-bold text-[#007554] mb-4">
+                <h2 className="text-xl md:text-3xl font-bold text-[#007554] mb-4">
                     Updates
                 </h2>
                 <div className="flex flex-col space-y-4">
                     {updates.map((updates, index) => (
                         <div key={index} className="hover:bg-zinc-200 bg-zinc-100 p-4 rounded-lg flex flex-col space-y-2">
-                            <h3 className="text-lg font-semibold text-black">
+                            <h3 className="text-base md:text-lg font-semibold text-black">
                                 {updates.title}
                             </h3>
-                            <p className="text-black">
+                            <p className="text-sm md:text-base text-black">
                                 {updates.desc}
                                 </p>
                         </div>
