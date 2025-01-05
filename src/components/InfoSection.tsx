@@ -1,8 +1,8 @@
 //home page welcoming text
 "use client";
-import React from 'react';
-import Image from 'next/image';
-import { useLanguage } from '@/app/contexts/LanguageContext';
+import React from "react";
+import Image from "next/image";
+import { useLanguage } from "@/app/(app)/contexts/LanguageContext";
 
 const InfoSection = () => {
   const { language, translations } = useLanguage();
@@ -14,7 +14,7 @@ const InfoSection = () => {
         {/* Title for mobile - shows first on mobile, hidden on desktop */}
         <div className="w-full text-center lg:hidden">
           <h1 className="text-[#0066cc] text-4xl font-bold mb-5 pb-2.5 border-b-3 border-[#0066cc] inline-block">
-          {translations['home-info.title'][language]}
+            {translations["home-info.title"][language]}
           </h1>
         </div>
 
@@ -44,25 +44,26 @@ const InfoSection = () => {
         <div className="flex-1 p-5 lg:p-5 w-full">
           {/* Title for desktop - hidden on mobile, shows in original position on desktop */}
           <h1 className="hidden lg:block text-[#0066cc] text-4xl font-bold mb-5 pb-2.5 border-b-3 border-[#0066cc]">
-          {translations['home-info.title'][language]}
+            {translations["home-info.title"][language]}
           </h1>
 
           <div className="space-y-4">
             <p className="bg-[#f0f8ff] p-4 border-l-4 border-red-500 rounded text-gray-800 leading-relaxed">
-            {translations['home-info.p1'][language]}
+              {translations["home-info.p1"][language]}
             </p>
 
             <p className="bg-[#f0f8ff] p-4 border-l-4 border-[#1e90ff] rounded text-gray-800 leading-relaxed">
-              Geographically, Kaliakair is located at latitude 24.0730°N and longitude 90.2167°E. It
-              is bordered by Mirzapur and Sakhipur upazilas to the north, Savar and Dhamrai upazilas
-              to the south, Gazipur Sadar and Sreepur upazilas to the east, and Mirzapur upazila to the
-              west.
+              Geographically, Kaliakair is located at latitude 24.0730°N and
+              longitude 90.2167°E. It is bordered by Mirzapur and Sakhipur
+              upazilas to the north, Savar and Dhamrai upazilas to the south,
+              Gazipur Sadar and Sreepur upazilas to the east, and Mirzapur
+              upazila to the west.
             </p>
 
             <p className="bg-[#f0f8ff] p-4 border-l-4 border-[#dc3545] rounded text-gray-800 leading-relaxed">
-              The primary rivers in the area are Turag, Bangshi, and Salda. Other notable water
-              bodies include Boali, Hawla, Ujan, and Markaj beels, along with the Goala and Betjuri
-              canals.
+              The primary rivers in the area are Turag, Bangshi, and Salda.
+              Other notable water bodies include Boali, Hawla, Ujan, and Markaj
+              beels, along with the Goala and Betjuri canals.
             </p>
           </div>
         </div>

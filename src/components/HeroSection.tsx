@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
-import { useLanguage } from '@/app/contexts/LanguageContext';
+import React, { useState, useEffect } from "react";
+import Image from "next/image";
+import { useLanguage } from "@/app/(app)/contexts/LanguageContext";
 
 const HeroSection = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -11,24 +11,24 @@ const HeroSection = () => {
   // Array of image objects with src and alt text
   const images = [
     {
-      src: '/asthetic-photos/HighTEch.webp',
-      alt: 'Bangabandhu Hi-Tech Park'
+      src: "/asthetic-photos/HighTEch.webp",
+      alt: "Bangabandhu Hi-Tech Park",
     },
     {
-      src: '/asthetic-photos/Kaliakoir_Pic1.webp',
-      alt: 'Wow! Kaliakoir'
+      src: "/asthetic-photos/Kaliakoir_Pic1.webp",
+      alt: "Wow! Kaliakoir",
     },
     {
-      src: '/asthetic-photos/Kaliakoir_rail.webp',
-      alt: 'Kaliakoir Rail'
+      src: "/asthetic-photos/Kaliakoir_rail.webp",
+      alt: "Kaliakoir Rail",
     },
     {
-      src: '/asthetic-photos/Mokhosh_swamp2.webp',
-      alt: 'Mokhosh swamp'
+      src: "/asthetic-photos/Mokhosh_swamp2.webp",
+      alt: "Mokhosh swamp",
     },
     {
-      src: '/asthetic-photos/ShreefaltaliCourtOfEstate.webp',
-      alt: 'Shreefaltali Court Of Estate'
+      src: "/asthetic-photos/ShreefaltaliCourtOfEstate.webp",
+      alt: "Shreefaltali Court Of Estate",
     },
   ];
 
@@ -47,7 +47,6 @@ const HeroSection = () => {
         priority
         className="object-cover"
       />
-      
     </div>
   );
 };

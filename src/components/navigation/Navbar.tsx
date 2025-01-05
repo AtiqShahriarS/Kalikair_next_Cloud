@@ -1,10 +1,10 @@
 "use client";
 
-import React, { useState } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import NavLinks from './NavLinks';
-import { useLanguage } from '@/app/contexts/LanguageContext';
+import React, { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import NavLinks from "./NavLinks";
+import { useLanguage } from "@/app/(app)/contexts/LanguageContext";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,7 +28,7 @@ const Navbar = () => {
                   />
                 </div>
                 <h1 className="text-white text-2xl [@media(max-width:925px)]:text-3xl font-semibold block transition-all duration-500 ease-in-out">
-                  {translations['site.title'][language]}
+                  {translations["site.title"][language]}
                 </h1>
               </Link>
             </div>
@@ -51,16 +51,20 @@ const Navbar = () => {
         {/* Language Switcher */}
         <div className="absolute top-[125px] right-4 bg-[#007554] text-white py-1 px-4 rounded-b-md z-30">
           <div className="flex items-center gap-2">
-            <button 
-              onClick={() => setLanguage('bn')} 
-              className={`hover:opacity-90 ${language === 'bn' ? 'font-bold underline' : ''}`}
+            <button
+              onClick={() => setLanguage("bn")}
+              className={`hover:opacity-90 ${
+                language === "bn" ? "font-bold underline" : ""
+              }`}
             >
               বাংলা
             </button>
             <span>|</span>
-            <button 
-              onClick={() => setLanguage('en')} 
-              className={`hover:opacity-90 ${language === 'en' ? 'font-bold underline' : ''}`}
+            <button
+              onClick={() => setLanguage("en")}
+              className={`hover:opacity-90 ${
+                language === "en" ? "font-bold underline" : ""
+              }`}
             >
               English
             </button>
@@ -70,11 +74,11 @@ const Navbar = () => {
 
       {/* Mobile Menu Wrapper */}
       <div className="fixed top-[125px] left-0 right-0 overflow-hidden [@media(min-width:925px)]:hidden z-40">
-        <div 
+        <div
           className={`
             bg-[#007554] w-full transform
             transition-transform duration-300 ease-in-out
-            ${isMenuOpen ? 'translate-y-0' : '-translate-y-full'}
+            ${isMenuOpen ? "translate-y-0" : "-translate-y-full"}
           `}
         >
           <NavLinks mobile={true} setMenuOpen={setIsMenuOpen} />
